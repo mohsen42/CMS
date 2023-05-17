@@ -20,4 +20,8 @@ public class News {
         this.reviewers.add(review);
         return review;
     }
+
+    public boolean revised(){
+        return this.mandatoryReviewers.stream().allMatch(reviewer -> this.reviewers.stream().anyMatch(review -> reviewer.id.equals(review.userId)&& "approved".equals(review.status)));
+    }
 }
