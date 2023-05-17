@@ -3,9 +3,33 @@ package com.example.cms.vo;
 import com.example.cms.models.Role;
 
 public class UserRequest {
-    String identity;
+    public String getIdentity() {
+        return identity;
+    }
 
-    String name;
+    public void setIdentity(String identity) {
+        this.identity = identity;
+    }
 
-    Role role;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    private String identity;
+
+    private String name;
+
+    private Role role;
 }
